@@ -202,7 +202,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #0059b3; /* Azul tomado del logo */
-  padding: 15px;
+  padding: 0%;
   margin: 0%;
   border-bottom: 2px solid rgba(0, 0, 0, 0.12); /* Añadido para estilo Material */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -370,14 +370,12 @@ body {
 }
 
 /* Estilos para el Header y la Navbar */
-header {
+/* header { GFE
   background-color:  #0059b3;
   padding: 10px 0;
   text-align: center;
   margin-bottom: 0;
-
-
-}
+} */
 
 /* Estilos generales para resetear márgenes y padding */
 * {
@@ -781,7 +779,7 @@ header {
   justify-content: space-between !important;
   align-items: center;
   background-color: #0059b3; /* Azul tomado del logo */
-  padding: 15px;
+  /* padding: 15px; */
   border-bottom: 2px solid rgba(0, 0, 0, 0.12); /* Añadido para estilo Material */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
