@@ -39,6 +39,9 @@ h2 {
   cursor: pointer;
   }
 
+  .bi-search {
+    color: #073d73; 
+  }
 .searchbar {
     flex: 1;
     /* max-width: 400px; */
@@ -200,6 +203,7 @@ header {
   align-items: center;
   background-color: #0059b3; /* Azul tomado del logo */
   padding: 15px;
+  margin: 0%;
   border-bottom: 2px solid rgba(0, 0, 0, 0.12); /* Añadido para estilo Material */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
