@@ -95,7 +95,7 @@ h2 {
 .logo-container img {
   max-height: 70px;
   /* margin-left: 20px; */
-  padding-left: 20px; 
+  padding-left: 0%; 
   /* Agrega espacio a la izquierda del logo */
   flex-shrink: 0; /* Para evitar que el logo se reduzca */
 
