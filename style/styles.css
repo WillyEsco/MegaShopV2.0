@@ -1,0 +1,788 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2 {
+  text-align: center;
+  color: #0059b3 !important; 
+  /* Azul del logo */
+  font-size: 2.5rem;    
+  margin-bottom: 0px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Fila Superior: Logo, Barra de Búsqueda y Carrito */
+/* Fila Superior: Logo, Barra de Búsqueda y Carrito */
+
+/* Fila Superior: Logo, Barra de Búsqueda y Carrito */
+
+
+.header-top {
+    background-color: #0d6efd; /* Fondo azul */
+    color: white;
+    display: flex;
+    align-items: center;          /* Centra verticalmente los elementos */
+    justify-content: space-between !important; /* Espacia los elementos entre sí */
+}
+
+.header-top .navbar-brand {
+    font-size: 1.5rem;
+}
+.carrito {
+  background-color: #0d6efd;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  }
+
+.searchbar {
+    flex: 1;
+    /* max-width: 400px; */
+    width: 100%;
+}
+
+.searchbar .form-control {
+    border-radius: 50px 0 0 50px;
+    border-right: none;
+}
+
+.searchbar .btn {
+    border-radius: 0 50px 50px 0;
+}
+
+.container .btn-light {
+    background-color: transparent;
+    border: none;
+}
+
+
+
+/* Fila Inferior: Navbar */
+.navbar {
+    background-color: #0d6efd; /* Fondo azul para la navbar también */
+}
+
+.navbar .nav-link {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #ffc107; /* Color de hover y activo */
+}
+
+.header-top .bi-cart3, .bi-person-circle{
+  font-size: 1.5rem;
+  color: white !important;
+}
+.logo-container img {
+  max-height: 70px;
+  /* margin-left: 20px; */
+  padding-left: 20px; 
+  /* Agrega espacio a la izquierda del logo */
+  flex-shrink: 0; /* Para evitar que el logo se reduzca */
+
+}
+/* Botón para la search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+
+.search-bar input {
+  padding: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.12); 
+  /* Borde estilo Material */
+  border-radius: 24px 0 0 24px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #ffcc00; 
+  /* Amarillo del logo */
+  color: #333;
+  border-radius: 0 24px 24px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);   
+  margin-right: 20px; /* Agrega espacio a la derecha del botón */
+}
+
+
+
+.search-bar button:hover {
+  background-color: #e6b800; 
+  /* Más oscuro en hover */
+}
+/* Botón para la search bar */
+.search-btn {
+  background-color: #ff6f00;
+  padding: 10px 20px;
+  border-radius: 50px; 
+  /* Borde más redondeado para un look moderno */
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-btn:hover {
+  background-color: #ff8f00;
+  transform: translateY(-2px); 
+  /* Pequeño movimiento al hover */
+}
+
+.search-btn:active {
+  background-color: #e65100;
+  transform: translateY(0); 
+  /* Vuelve al lugar original al click */
+}.searchbar {
+flex: 1;
+max-width: 400px;
+}
+
+.searchbar .form-control {
+border-radius: 50px 0 0 50px;
+border-right: none;
+}
+
+.searchbar .btn {
+border-radius: 0 50px 50px 0;
+}
+/* -------- */
+body {
+  /* font-family: 'Arial', sans-serif; */
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+/* Estilos del header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0059b3; /* Azul tomado del logo */
+  padding: 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12); /* Añadido para estilo Material */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+  padding-left: 10px; 
+  /* Agrega espacio a la izquierda del logo */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+/* Carrusel */
+.carousel {
+  background-color: #ff453a; 
+  /* Rojo del logo */
+  color: white;
+  text-align: center;
+  padding: 30px 5px 0;
+  margin: 5px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  position: relative;
+  height: 180px; 
+  /* Aumentamos la altura */
+  overflow: hidden;
+}
+
+.mascot {
+  position: relative;
+  text-align: left;
+  /* top: 0;
+  left: 0; */
+  z-index: 1; 
+  /* Para asegurarse de que esté encima de las slides */
+  height: 90%; 
+  /* Asegura que la imagen ocupe todo el alto del carrusel */
+  width: auto; 
+  /* Mantener proporción */
+}
+
+.mascot img {
+  max-height: 90%; 
+  /* Escalar la imagen dentro del contenedor */
+  width: auto;
+}
+
+.slide {
+  /* font-family: Arial, sans-serif; */
+  font-size: 1.7rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slide.active {
+  opacity: 1;
+}
+/* Estilos de productos */
+main {
+  flex-grow: 1; 
+   /* Para que ocupe el espacio disponible y el footer se mantenga al final */
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h2 {
+  text-align: center;
+  color: #0059b3; 
+  /* Azul del logo */
+  font-size: 2.5rem;    
+  margin-bottom: 0px;
+}
+/* Estilos para productos */
+#productos {
+  width: 100%;
+  /* padding: 20px; */
+  margin-bottom: 10px;
+  margin-top: 10px;
+  /*  Agrega espacio debajo de los productos */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 12px; 
+  /* Material Design Border Radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+  /* Material Design Shadow */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  height: auto;
+}
+
+.product-card h3 {
+  margin: 15px 0 10px;
+  color: #ff453a; 
+  /* Rojo del logo */
+  font-size: 1.2rem;
+}
+
+.product-card p {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+}
+.product-card button {
+  background-color: #ff9800;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #e68900;
+  cursor: pointer;
+}
+/* Estilos básicos para reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para el cuerpo */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para el Header y la Navbar */
+header {
+  background-color:  #0059b3;
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 0;
+
+
+}
+
+/* Estilos generales para resetear márgenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+} */
+/* Estilos para el Footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color:  #0059b3;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  position: relative;
+  padding: 20px 0;
+
+  /* display: flex; */
+  align-items: center;  
+  /* Alinea el contenido verticalmente al centro */
+  /* justify-content: center; Centra horizontalmente */
+  padding: 10px;
+  /* background-color: #004080; */
+  color: white;
+}
+
+footer img {
+  height: 50px;
+  margin-right: 10px; 
+  /* Espacio entre el logo y el texto */
+}
+.Prod-Dest-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3px;
+  line-height: 1;
+}
+.Prod-Dest-header .mascota {
+  width: 120px;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .Prod-Dest-header {
+    flex-direction: column;
+    text-align: center;
+    }
+    .carousel p {
+      font-size: 1.4rem; 
+      /* Leyenda del carrousel para celulares de pantallas chicas */
+
+  }
+  }
+  h2 {
+    font-size: 2em; /* Tamaño estándar para escritorio */
+  }
+  
+
+  /* Ajustes para tablets (pantallas medianas) */
+  @media (max-width: 600px) {
+    h2 {
+      font-size: 1.5em; /* Reduce el tamaño del h2 para tablets */
+    }
+  
+    iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+  }
+  
+  /* Ajustes para dispositivos móviles */
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.2em; /* Reduce el tamaño del h2 aún más para móviles */
+    }
+  
+    iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+  }
+  /* Estilo general para la sección */
+.nosotros-section {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 600px) {
+  .nosotros-section {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 0;
+  }
+  
+  /* Reducción del tamaño del h2 en móviles */
+  .nosotros-section h2 {
+      font-size: 1.5em;
+      margin-top: 0;
+      margin-bottom: 10px;
+  }
+
+  /* Ajuste del iframe del video para ocupar el ancho del contenedor */
+  .nosotros-section iframe {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+  }
+}
+.mdc-button {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mdc-button:hover {
+  background-color: #ff4500;
+}
+/* Estilo del botón */
+/* Estilo del botón */
+.mdc-button--raised {
+  background-color: #ff9800;
+  color: white;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex; /* Flexbox para alinear el texto y el icono */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+}
+
+.mdc-button--raised i {
+  margin-left: 8px; 
+  /* Espacio entre el texto y el icono */
+}
+
+.mdc-button--raised:hover {
+  background-color: #e68a00;
+}
+.modal-header {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.modal-header .logo {
+  max-width: 60px;
+  height: auto;
+  /* width: 100px; */
+  /* width: 60px;
+  height: auto; */
+}
+
+.modal-header .mascota {
+  max-width: 100px;
+  height: auto;
+  /* width: 100px; */
+  /* height: auto; */
+}
+abel {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  box-shadow: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6200ea; 
+  /* Color del branding */
+}
+
+/* Botones estilo Material Design 3 */
+.btn-md3 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background-color: #ff6f00; 
+  /* Color de fondo vibrante */
+  color: #fff; 
+  /* Color del texto */
+  border: none;
+  border-radius: 30px !important ;
+  /* Esquinas redondeadas */
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: none; 
+  /* Sin sombra o muy sutil */
+  transition: background-color 0.3s ease, box-shadow 0.2s ease; /* Animación */
+}
+
+.btn-md3:hover {
+  background-color: #ff8f00; 
+  /* Color más claro al hacer hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  /* Elevación al hacer hover */
+}
+
+.btn-md3:active {
+  background-color: #e65100; 
+  /* Color más oscuro al hacer click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  /* Sombra más pequeña */
+}
+
+.btn-md3-icon {
+  margin-right: 8px; 
+  /* Espacio entre el icono y el texto */
+}
+/* Estilos generales para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  /* Fondo semi-transparente */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: azure;
+  /* padding: 20px; */
+  /* border-radius: 8px; */
+  /* max-width: 500px; */
+  /* width: 90%; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos de Material Design para los campos del formulario */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.modal-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.modal-body input,
+.modal-body textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.modal-body button {
+  width: 100%;
+  padding: 15px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+/* Media Query para pantallas pequeñas (hasta 600px) */
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 95%; 
+    /* Ajusto el ancho para pantallas más pequeñas */
+  }
+
+  .modal-header .logo,
+  .modal-header .mascota {
+    width: 80px; 
+    /* Reduzco el tamaño del logo y la mascota en pantallas pequeñas */
+  }
+
+  .modal-body input,
+  .modal-body textarea {
+    padding: 10px; 
+    /* Reduzco el padding para que el form sea más compacto */
+    font-size: 0.9rem; 
+    /* Ajusto el tamaño del texto */
+  }
+
+  .modal-body button {
+    padding: 10px; 
+    /* Ajusto el tamaño del botón */
+    font-size: 1rem; 
+    /* Reduzco el tamaño del texto en el botón */
+  }
+
+/* ---------------------------- */
+
+/* ---------------------------- */   
+.modal-header {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.modal-header .logo {
+  max-width: 60px;
+  height: auto;
+  /* width: 100px; */
+  /* width: 60px;
+  height: auto; */
+}
+
+.modal-header .mascota {
+  max-width: 100px;
+  height: auto;
+  /* width: 100px; */
+  /* height: auto; */
+}
+.modal-header {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-bottom: 10px; */
+}
+
+.modal-header .logo {
+  width: 80px;
+  /* width: 60px;
+  height: auto; */
+}
+
+.modal-header .mascota {
+  width: 80px;
+  /* height: auto; */
+}
+@media (max-width: 600px){
+
+    .modal-header .mascota {
+      display: none;
+      /* height: auto; */
+    }
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+  background-color: #0059b3; /* Azul tomado del logo */
+  padding: 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12); /* Añadido para estilo Material */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* ----- */
+.d-flex.gap-2 {
+  gap: 10px; /* Ajusta el espacio entre el carrito y la cuenta */
+}
+/* ----- */
