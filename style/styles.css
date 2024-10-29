@@ -278,7 +278,14 @@ main {
   align-items: center;
   background-color: #fff;
 }
-* {
+main.nosotros-section{
+  background-color: #f7f7f7;
+  max-width: 1200px; /* Establece un ancho máximo para el contenido */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  padding: 20px; /* Opcional: agrega un padding para mejorar la estética */
+
+  }
+  * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -397,6 +404,7 @@ body {
 footer {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   background-color:  #0059b3;
   color: white;
   text-align: center;
@@ -405,8 +413,8 @@ footer {
   bottom: 0;
   width: 100%;
   position: relative;
-  padding: 20px 0;
-
+  /* padding: 20px 0; */
+  padding: 10px 20px;    
   /* display: flex; */
   align-items: center;  
   /* Alinea el contenido verticalmente al centro */
@@ -414,6 +422,7 @@ footer {
   padding: 10px;
   /* background-color: #004080; */
   color: white;
+  gap: 8px;  
 }
 
 footer img {
@@ -421,6 +430,8 @@ footer img {
   margin-right: 10px; 
   /* Espacio entre el logo y el texto */
 }
+/* Estilos para el texto del Footer */
+
 .Prod-Dest-header {
   display: flex;
   justify-content: center;
