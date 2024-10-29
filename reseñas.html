@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaShop</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Incluye Material Icons desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Fila Superior: Logo, Barra de Búsqueda, Carrito -->
+<header class="header-top bg-primary text-white py-2">
+    <div class="container d-flex align-items-center justify-content-between">
+        
+        <!-- Logo en el extremo izquierdo -->
+        <div class="logo-container">
+            <a href="#">
+                <img src="images/logo.png" alt="MegaShop Logo">
+            </a>
+        </div>
+        
+        <!-- Barra de Búsqueda centrada -->
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <button>
+                   <i class="bi bi-search text-primary"></i> <!-- Icono de lupa de Bootstrap -->
+                <!-- <b>BUSCAR</b> -->
+            </button>
+         
+
+        </div>
+
+        <!-- Carrito y cuenta en el extremo derecho -->
+        <div class="d-flex align-items-center gap-2">
+            <a href="#" class="btn btn-light rounded-circle p-2">
+                <i class="bi bi-cart3 text-primary"></i>
+            </a>
+            <a href="#" class="btn btn-light rounded-circle p-2">
+                <i class="bi bi-person-circle"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+
+<!-- Fila Inferior: Navbar -->
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-md">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">
+                        <i class="bi bi-house-door"></i> Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">
+                        <i class="bi bi-bag"></i> Productos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-person-circle"></i> Cuenta
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./nosotros.html">
+                        <i class="bi bi-gear"></i> Nosotros
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="contact-link">
+                        <i class="bi bi-envelope"></i> Contacto
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="MegaShop Logo" style="height: 40px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html"><i class="bi bi-house"></i> Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+                <i class="bi bi-bag"></i> Productos
+            </a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="nosotros.html"><i class="bi bi-people"></i> Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="contact-link">
+                <i class="bi bi-envelope"></i> Contacto
+            </a>
+         </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="reseñas.html"><i class="bi bi-star"></i> Reseñas</a>
+          </li>
+        </ul>
+        <!-- <div class="d-flex">
+          <a href="#" class="btn btn-light rounded-circle me-2">
+            <i class="bi bi-cart3 text-primary"></i>
+          </a>
+          <a href="#" class="btn btn-light rounded-circle">
+            <i class="bi bi-person-circle text-primary"></i>
+          </a>
+        </div> -->
+      </div>
+    </div>
+  </nav>
+    
+
+<!-- Modal de contacto -->
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <img src="./images/logo.png" alt="MegaShop Logo" class="logo">
+            <h2>Contacto</h2>
+            <img src="./images/mascota1-frente.png" alt="Mascota frente 1 MegaShop" class="mascota">
+          </div>
+        <form action="https://formspree.io/f/xzzbzzge" method="POST">
+            <div class="form-group">
+                <input type="text" id="name" name="name" required placeholder="Ingresa tu Nombre...">
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder="tu e-Mail...">
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" required placeholder="y tu sugerencia para MegaShop..."></textarea>
+            </div>
+
+            <button type="submit" class="mdc-button mdc-button--raised">
+                ENVIAR <i class="material-icons">send</i>
+            </button>
+        </form>
+    </div>
+</div>
+
+  
+ <!-- Main -->
+ <main class="container my-4">
+    <h2 class="mb-3">Reseñas de Productos</h1>
+    <p class="lead">Consulta las opiniones de otros usuarios sobre nuestros productos.</p>
+    
+    <div class="row">
+      <!-- Reseña 1 -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Producto 1</h5>
+            <p class="card-text">"Excelente calidad y precio."</p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star text-muted"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Reseña 2 -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Producto 2</h5>
+            <p class="card-text">"Muy satisfecho con la compra."</p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Reseña 3 -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Producto 3</h5>
+            <p class="card-text">"Lo recomiendo, muy útil."</p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star text-muted"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Reseña 4 -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Producto 4</h5>
+            <p class="card-text">"Buena relación calidad-precio."</p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-muted"></i>
+              <i class="bi bi-star text-muted"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Reseña 5 -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Producto 5</h5>
+            <p class="card-text">"Cumple con lo prometido."</p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Reseña 6 -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Producto 6</h5>
+            <p class="card-text">"No es lo que esperaba."</p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star text-muted"></i>
+              <i class="bi bi-star text-muted"></i>
+              <i class="bi bi-star text-muted"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Reseña 7 -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Producto 7</h5>
+            <p class="card-text">"Excelente servicio al cliente."</p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Reseña 8 -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Producto 8</h5>
+            <p class="card-text">"Calidad aceptable, buen envío."</p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-muted"></i>
+              <i class="bi bi-star text-muted"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Reseña 9 -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Producto 9</h5>
+            <p class="card-text">"Me gusta mucho, muy recomendable."</p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Reseña 10 -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Producto 10</h5>
+            <p class="card-text">"El mejor producto que he comprado."</p>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="fabStudios">
+                <a href="#"><img src="./images/fabStudios.png" alt="FabStudios" ></a>
+            </div>
+            <p>&copy; 2024 MegaShop - Derechos Reservados.</p>           
+        </footer>
+    </main>
+
+
+  <!-- Scripts de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+function showNextSlide() {
+    slides[currentSlide].classList.remove('active'); // Ocultar la diapositiva actual
+    currentSlide = (currentSlide + 1) % slides.length; // Mover a la siguiente
+    slides[currentSlide].classList.add('active'); // Mostrar la nueva diapositiva
+}
+// Cambiar la diapositiva cada 3 segundos
+setInterval(showNextSlide, 3000);
+
+// Obtener el modal y el enlace de contacto
+var modal = document.getElementById("contactModal");
+var contactLink = document.getElementById("contact-link");
+var span = document.getElementsByClassName("close")[0];
+
+// Al hacer clic en "Contacto", mostrar el modal
+contactLink.onclick = function() {
+    modal.style.display = "flex";
+}
+
+// Al hacer clic en la "X", cerrar el modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Al hacer clic fuera del modal, cerrar el modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+</body>
+</html>
