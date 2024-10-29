@@ -99,7 +99,6 @@ h2 {
   padding-left: 0%; 
   /* Agrega espacio a la izquierda del logo */
   flex-shrink: 0; /* Para evitar que el logo se reduzca */
-
 }
 /* Botón para la search bar */
 .search-bar {
@@ -115,6 +114,7 @@ h2 {
   border-radius: 24px 0 0 24px;
   outline: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-left: 10px;
 }
 
 .search-bar button {
@@ -127,7 +127,7 @@ h2 {
   cursor: pointer;
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);   
-  margin-right: 20px; /* Agrega espacio a la derecha del botón */
+  margin-right: 10px; /* Agrega espacio a la derecha del botón */
 }
 
 
