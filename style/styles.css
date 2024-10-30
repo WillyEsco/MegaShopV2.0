@@ -800,3 +800,23 @@ header {
   gap: 10px; /* Ajusta el espacio entre el carrito y la cuenta */
 }
 /* ----- */
+.grid-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 0;
+}
+
+main {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+footer {
+  background-color: #007bff;
+  color: white;
