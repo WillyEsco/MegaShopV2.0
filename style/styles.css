@@ -820,3 +820,8 @@ main {
 footer {
   background-color: #007bff;
   color: white;
+}
+/* ----- */
+.footer-social {
+  color: rgb(6, 6, 75);
+}
